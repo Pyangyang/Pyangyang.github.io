@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-15T15:45:47.164Z</updated>
+  <updated>2018-04-22T12:52:16.147Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode/House Rabber</title>
+    <link href="http://yoursite.com/2018/04/22/leetcode/"/>
+    <id>http://yoursite.com/2018/04/22/leetcode/</id>
+    <published>2018-04-22T11:58:46.000Z</published>
+    <updated>2018-04-22T12:52:16.147Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是我的正式的第一篇博文！</p><p>作为一个不是很擅长整理文字的人，但是每次看到别人整理的博文觉得惊喜又有意义，同时，为了提高自己整理知识，总结得能力，博主决定开始慢慢入坑博客，把自己所学到的一些知识点进行整理下来，希望能够提高自己对文字的敏感程度！</p><p>作为第一篇博文，在我决定动手开始写之前其实我都没想自己要写什么，应该怎么去安排博文才会更有意义，但是为了少说点闲话，我决定以记录自己做的题目作为开始点！</p><p>Leetcode 198: House Robber</p><p>这是一道dp类型的题目，最开始拿到的时候没有读懂题目意思。觉得不是按照奇偶顺序进行相加就可以了吗？No,我真的太天真！通过阅读别人的解题分析，此题的思路如下：</p><p>（1）利用动态规划的思想进行前推</p><p>（2）nums[i] = nums[i]+max(nums[i-2],nums[i-3])</p><p>（3）求max(nums[i],nums[i-1])</p><p>下面是我的coding（java）:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rob</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(len == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(len == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(len == <span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> Math.max(nums[<span class="number">0</span>], nums[<span class="number">1</span>]);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            nums[<span class="number">2</span>] += nums[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;len;i++)&#123;</span><br><span class="line">                nums[i] = nums[i]+Math.max(nums[i-<span class="number">2</span>],nums[i-<span class="number">3</span>]);</span><br><span class="line">            &#125; </span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> Math.max(nums[len-<span class="number">1</span>],nums[len-<span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p>第一次整理确实不知道怎么写比较好，从书写的质量来看确实不太美观，语言文字也是属于只有自己能看懂的状态，忘不小心看到这篇文章的网友们见谅，只能慢慢整理以待提高!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是我的正式的第一篇博文！&lt;/p&gt;
+&lt;p&gt;作为一个不是很擅长整理文字的人，但是每次看到别人整理的博文觉得惊喜又有意义，同时，为了提高自己整理知识，总结得能力，博主决定开始慢慢入坑博客，把自己所学到的一些知识点进行整理下来，希望能够提高自己对文字的敏感程度！&lt;/p&gt;
+&lt;p&gt;作
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>test</title>
